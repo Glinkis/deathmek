@@ -1,0 +1,17 @@
+#ifndef DEATHMEK_VECTOR2D_H
+#define DEATHMEK_VECTOR2D_H
+
+#include "Entity.h"
+
+class Vector2 : public Entity {
+public:
+  double x;
+  double y;
+
+  Vector2();
+
+  Vector2(double, double);
+};
+
+
+#endif //DEATHMEK_VECTOR2D_H
