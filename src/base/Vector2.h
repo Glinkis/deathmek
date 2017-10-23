@@ -1,5 +1,5 @@
-#ifndef DEATHMEK_VECTOR2D_H
-#define DEATHMEK_VECTOR2D_H
+#ifndef DEATHMEK_VECTOR2_H
+#define DEATHMEK_VECTOR2_H
 
 #include "Entity.h"
 
@@ -14,4 +14,4 @@ public:
 };
 
 
-#endif //DEATHMEK_VECTOR2D_H
+#endif //DEATHMEK_VECTOR2_H

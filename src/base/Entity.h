@@ -1,5 +1,5 @@
-#ifndef DEATHMEK_ACTOR_H
-#define DEATHMEK_ACTOR_H
+#ifndef DEATHMEK_ENTITY_H
+#define DEATHMEK_ENTITY_H
 
 
 class Entity {
@@ -14,4 +14,4 @@ private:
 };
 
 
-#endif //DEATHMEK_ACTOR_H
+#endif //DEATHMEK_ENTITY_H
