@@ -3,7 +3,9 @@
 #include "base/Vector2.h"
 
 int main() {
-  Entity entity;
+  {
+    Entity entity;
+  }
   std::cout << entity->getId() << "\n";
 
   Vector2 vector;
