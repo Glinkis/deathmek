@@ -4,12 +4,15 @@
 
 int main() {
   {
-    Entity entity;
+    Entity entity{};
     std::cout << entity.getId() << "\n";
 
-    Vector2 vector;
+    Vector2 vector{};
     std::cout << vector.getId() << "\n";
   }
+
+  std::string s{};
+  std::cin >> s;
 
   std::cout << "end" << "\n";
 }
