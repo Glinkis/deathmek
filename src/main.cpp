@@ -11,8 +11,7 @@ int main() {
     std::cout << vector.getId() << "\n";
   }
 
-  std::string s{};
-  std::cin >> s;
-
-  std::cout << "end" << "\n";
+  // Waits for input.
+  char input{};
+  std::cin >> input;
 }

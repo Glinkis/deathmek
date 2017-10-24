@@ -13,5 +13,4 @@ public:
   Vector2(double, double);
 };
 
-
 #endif //DEATHMEK_VECTOR2_H
