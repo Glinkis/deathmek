@@ -1,0 +1,13 @@
+{
+    "cppcheck.verbose": true,
+    "cppcheck.lintingEnabled": true,
+    "cmake.installPrefix": "build",
+    "cmake.preferredGenerators": [
+        "Ninja",
+        "Unix Makefiles",
+        "MinGW Makefiles"
+    ],
+    "cmake.debugConfig": {
+        "miDebuggerPath": "C:\\TDM-GCC-64\\bin\\gdb.exe"
+    }
+}

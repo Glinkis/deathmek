@@ -1,4 +1,5 @@
 .vs/
-.vscode/
 .idea/
 build/
+.vscode/.cmaketools.json
+.vscode/c_cpp_properties.json

@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "command": "Powershell",
+    "isShellCommand": true,
+    "args": ["-c"],
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "tasks": [
+        {
+            "taskName": "cmake",
+            "args": ["cmake ."],
+            "isBuildCommand": true
+        }
+    ]
+}
