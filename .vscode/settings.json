@@ -9,5 +9,8 @@
     ],
     "cmake.debugConfig": {
         "miDebuggerPath": "C:\\TDM-GCC-64\\bin\\gdb.exe"
+    },
+    "files.associations": {
+        "initializer_list": "cpp"
     }
 }
