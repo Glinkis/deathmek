@@ -5,11 +5,11 @@
 int main() {
   {
     Entity entity;
-  }
-  std::cout << entity->getId() << "\n";
+    std::cout << entity.getId() << "\n";
 
-  Vector2 vector;
-  std::cout << vector->getId() << "\n";
+    Vector2 vector;
+    std::cout << vector.getId() << "\n";
+  }
 
   std::cout << "end" << "\n";
 }
