@@ -6,6 +6,8 @@ Entity::Entity() {
   id_ = entityIndex++;
 }
 
+Entity::~Entity() {}
+  
 int Entity::getId() const {
   return id_;
 }

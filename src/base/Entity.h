@@ -5,11 +5,12 @@ class Entity {
 public:
   Entity();
 
-  /// Returns the unique ID of this entity.
+  ~Entity();
+
   int getId() const;
 
 private:
   int id_;
 };
 
-#endif //DEATHMEK_ENTITY_H
+#endif // DEATHMEK_ENTITY_H
