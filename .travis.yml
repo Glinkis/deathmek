@@ -1,4 +1,4 @@
-language: cpp
+language: generic
 
 compiler: 
   - gcc
@@ -11,6 +11,7 @@ addons:
           - ubuntu-toolchain-r-test
       packages:
           - clang-3.7
+          - cmake
           - g++-5
           - gcc-5
 
