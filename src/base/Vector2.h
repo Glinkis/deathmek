@@ -13,6 +13,8 @@ public:
   Vector2(double, double);
 
   ~Vector2();
+
+  bool operator==(const Vector2 &vector) const;
 };
 
 #endif // DEATHMEK_VECTOR2_H
