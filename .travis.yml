@@ -9,9 +9,10 @@ addons:
       sources:
           - llvm-toolchain-precise
           - ubuntu-toolchain-r-test
+          - kalakris-cmake
       packages:
           - clang-3.7
-          - cmake-3.7
+          - cmake
           - g++-5
           - gcc-5
 
