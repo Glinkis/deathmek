@@ -1,5 +1,4 @@
-#ifndef DEATHMEK_ENTITY_H
-#define DEATHMEK_ENTITY_H
+#pragma once
 
 class Entity {
 public:
@@ -12,5 +11,3 @@ public:
 private:
   int id_;
 };
-
-#endif // DEATHMEK_ENTITY_H
