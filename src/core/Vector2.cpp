@@ -18,6 +18,20 @@ bool Vector2::operator!=(const Vector2 &vector) const
   return x != vector.x && y != vector.y;
 }
 
+Vector2 Vector2::operator+=(const Vector2 &vector)
+{
+  x += vector.x;
+  y += vector.y;
+  return *this;
+}
+
+Vector2 Vector2::operator-=(const Vector2 &vector)
+{
+  x -= vector.x;
+  y -= vector.y;
+  return *this;
+}
+
 Vector2 Vector2::operator+(const Vector2 &vector) const
 {
   return Vector2(x + vector.x, y + vector.y);
