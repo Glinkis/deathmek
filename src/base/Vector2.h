@@ -15,6 +15,24 @@ public:
   ~Vector2();
 
   bool operator==(const Vector2 &vector) const;
+
+  bool operator!=(const Vector2 &vector) const;
+
+  Vector2 operator+(const Vector2 &vector) const;
+
+  Vector2 operator+(double amount) const;
+
+  Vector2 operator-(const Vector2 &vector) const;
+
+  Vector2 operator-(double amount) const;
+  
+  Vector2 operator*(const Vector2 &vector) const;
+  
+  Vector2 operator*(double amount) const;
+  
+  Vector2 operator/(const Vector2 &vector) const;
+  
+  Vector2 operator/(double amount) const;
 };
 
 #endif // DEATHMEK_VECTOR2_H
