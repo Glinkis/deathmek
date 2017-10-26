@@ -1,8 +1,6 @@
 #pragma once
 
-#include "Entity.h"
-
-struct Vector2 : public Entity {
+struct Vector2 {
 public:
   double x;
   double y;
