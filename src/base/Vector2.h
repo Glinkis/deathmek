@@ -3,7 +3,7 @@
 
 #include "Entity.h"
 
-class Vector2 : public Entity {
+struct Vector2 : public Entity {
 public:
   double x;
   double y;
