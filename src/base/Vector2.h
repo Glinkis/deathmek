@@ -1,5 +1,4 @@
-#ifndef DEATHMEK_VECTOR2_H
-#define DEATHMEK_VECTOR2_H
+#pragma once
 
 #include "Entity.h"
 
@@ -34,5 +33,3 @@ public:
   
   Vector2 operator/(double amount) const;
 };
-
-#endif // DEATHMEK_VECTOR2_H
