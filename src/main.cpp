@@ -1,7 +1,8 @@
 #include <iostream>
 #include "core/Vector2.h"
 
-int main() {
+int main()
+{
   Vector2 vector1{};
   Vector2 vector2{0, 0};
 

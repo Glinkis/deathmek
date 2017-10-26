@@ -8,6 +8,7 @@ Vector2::Vector2(double x, double y)
 
 Vector2::~Vector2() {}
 
-bool Vector2::operator==(const Vector2 &vector) const {
-    return x == vector.x && y == vector.y;
+bool Vector2::operator==(const Vector2 &vector) const
+{
+  return x == vector.x && y == vector.y;
 }

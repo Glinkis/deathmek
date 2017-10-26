@@ -1,6 +1,7 @@
 #pragma once
 
-struct Vector2 {
+struct Vector2
+{
 public:
   double x;
   double y;
