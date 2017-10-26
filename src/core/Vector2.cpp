@@ -3,8 +3,8 @@
 Vector2::Vector2()
     : x(), y() {}
 
-Vector2::Vector20(double x, double y)
-    : x{x}, y(y) {}
+Vector2::Vector2(double x, double y)
+    : x(x), y(y) {}
 
 Vector2::~Vector2() {}
 

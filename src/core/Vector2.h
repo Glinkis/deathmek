@@ -7,7 +7,7 @@ public:
 
   Vector2();
 
-  Vector2(double, double);
+  Vector2(double x, double y);
 
   ~Vector2();
 
@@ -22,12 +22,12 @@ public:
   Vector2 operator-(const Vector2 &vector) const;
 
   Vector2 operator-(double amount) const;
-  
+
   Vector2 operator*(const Vector2 &vector) const;
-  
+
   Vector2 operator*(double amount) const;
-  
+
   Vector2 operator/(const Vector2 &vector) const;
-  
+
   Vector2 operator/(double amount) const;
 };
