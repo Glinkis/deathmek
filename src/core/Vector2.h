@@ -15,10 +15,17 @@ public:
   /**
    * Constructor using initial values for each component.
    * 
-   * @param x - the X-component value.
-   * @param x - the Y-component value.
+   * @param x - The X-component value.
+   * @param x - The Y-component value.
    */
   Vector2(T x, T y) : X(x), Y(y){};
+
+  /**
+   * Constructs a vector from a Vector2.
+   * 
+   * @param vector - Vector to construct from.
+   */
+  Vector2(const Vector2 &vector) : X(vector.X), Y(vector.Y){};
 
   ~Vector2(){};
 
@@ -28,7 +35,7 @@ public:
    * @param vector - The vector to compare against.
    * @return true if the two vectors are equal, otherwise false.
    */
-  bool operator==(const Vector2<T> &vector) const
+  bool operator==(const Vector2 &vector) const
   {
     return X == vector.X && Y == vector.Y;
   }
