@@ -3,8 +3,8 @@
 
 int main()
 {
-  Vector2 vector1{};
-  Vector2 vector2{0, 0};
+  Vector2<double> vector1{};
+  Vector2<double> vector2{0, 0};
 
   std::cout << (vector1 == vector2 ? "true" : "false") << "\n";
 

@@ -1,16 +1,26 @@
 #pragma once
 
+template <typename T>
 struct Vector2
 {
 public:
-  double x;
-  double y;
+  T x;
+  T y;
 
-  Vector2();
+  /**
+   * The default constructor. 
+   */
+  Vector2() : x(), y(){};
 
-  Vector2(double x, double y);
+  /**
+   * A constructor that takes and assigns a value for each component.
+   * 
+   * @param x - the x-component value.
+   * @param y - the y-component value.
+   */
+  Vector2(T x, T y) : x(x), y(y){};
 
-  ~Vector2();
+  ~Vector2(){};
 
   /**
    * Compares this vector against another for equality.
@@ -18,7 +28,10 @@ public:
    * @param vector - The vector to compare against.
    * @return true if the two vectors are equal, otherwise false.
    */
-  bool operator==(const Vector2 &vector) const;
+  bool operator==(const Vector2<T> &vector) const
+  {
+    return x == vector.x && y == vector.y;
+  }
 
   /**
    * Compares this vector against another for inequality.
@@ -26,7 +39,10 @@ public:
    * @param vector - The vector to compare against.
    * @return true if the two vectors are not equal, otherwise false.
    */
-  bool operator!=(const Vector2 &vector) const;
+  bool operator!=(const Vector2 &vector) const
+  {
+    return x != vector.x && y != vector.y;
+  }
 
   /**
    * Gets the result of adding two vectors together.
@@ -34,7 +50,10 @@ public:
    * @param vector - The other vector to add to this.
    * @return The result of adding the vectors together.
    */
-  Vector2 operator+(const Vector2 &vector) const;
+  Vector2 operator+(const Vector2 &vector) const
+  {
+    return Vector2(x + vector.x, y + vector.y);
+  }
 
   /**
    * Gets the result of this vector + amount.
@@ -42,7 +61,10 @@ public:
    * @param amount - An amount to add to each component.
    * @return The result of this vector + amount.
    */
-  Vector2 operator+(double amount) const;
+  Vector2 operator+(T amount) const
+  {
+    return Vector2(x + amount, y + amount);
+  }
 
   /**
    * Gets the result of subtracting a vector from this one.
@@ -50,7 +72,10 @@ public:
    * @param vector - The other vector to subtract from this.
    * @return The result of the subtraction.
    */
-  Vector2 operator-(const Vector2 &vector) const;
+  Vector2 operator-(const Vector2 &vector) const
+  {
+    return Vector2(x - vector.x, y - vector.y);
+  }
 
   /**
    * Gets the result of this vector - amount.
@@ -58,7 +83,10 @@ public:
    * @param amount - An amount to subtract from each component.
    * @return The result of this vector - amount.
    */
-  Vector2 operator-(double amount) const;
+  Vector2 operator-(T amount) const
+  {
+    return Vector2(x - amount, y - amount);
+  }
 
   /**
    * Gets the result of multiplying this vector by another.
@@ -66,7 +94,10 @@ public:
    * @param vector - The other vector to multiply this by.
    * @return The result of the multiplication.
    */
-  Vector2 operator*(const Vector2 &vector) const;
+  Vector2 operator*(const Vector2 &vector) const
+  {
+    return Vector2(x * vector.x, y * vector.y);
+  }
 
   /**
    * Gets the result of scaling the vector by an amount.
@@ -74,7 +105,10 @@ public:
    * @param amount - How much to scale the vector by.
    * @return The result of scaling this vector.
    */
-  Vector2 operator*(double amount) const;
+  Vector2 operator*(T amount) const
+  {
+    return Vector2(x * amount, y * amount);
+  }
 
   /**
    * Gets the result of dividing this vector by another.
@@ -82,7 +116,10 @@ public:
    * @param vector - The other vector to divide this by.
    * @return The result of the division.
    */
-  Vector2 operator/(const Vector2 &vector) const;
+  Vector2 operator/(const Vector2 &vector) const
+  {
+    return Vector2(x / vector.x, y / vector.y);
+  }
 
   /**
    * Gets the result of dividing the vector by a value.
@@ -90,7 +127,12 @@ public:
    * @param amount - How much to divide the vector by.
    * @return  The result of division on this vector.
    */
-  Vector2 operator/(double amount) const;
+  Vector2 operator/(T amount) const
+  {
+    // Prevents problems with division by zero.
+    const double scale = 1. / amount;
+    return Vector2(x * scale, y * scale);
+  }
 
   /**
    * Adds another vector to this.
@@ -106,7 +148,7 @@ public:
    * @param amount - The amount to add.
    * @return Copy of the vector after addition.
    */
-  Vector2 operator+=(double amount);
+  Vector2 operator+=(T amount);
 
   /**
    * Subtracts another vector from this.
@@ -122,7 +164,7 @@ public:
    * @param amount - The amount to subtract.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator-=(double amount);
+  Vector2 operator-=(T amount);
 
   /**
    * Multiplies this with another vector.
@@ -138,7 +180,7 @@ public:
    * @param amount - The amount to multiply by.
    * @return Copy of the vector after multiplication.
    */
-  Vector2 operator*=(double amount);
+  Vector2 operator*=(T amount);
 
   /**
    * Divides this by another vector.
@@ -154,5 +196,5 @@ public:
    * @param amount - The amount to divide by.
    * @return Copy of the vector after division.
    */
-  Vector2 operator/=(double amount);
+  Vector2 operator/=(T amount);
 };
