@@ -1,0 +1,3 @@
+D:/Projects/deathmek/CodeBlocks/CMakeFiles/deathmek.dir
+D:/Projects/deathmek/CodeBlocks/CMakeFiles/edit_cache.dir
+D:/Projects/deathmek/CodeBlocks/CMakeFiles/rebuild_cache.dir
