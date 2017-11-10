@@ -4,44 +4,44 @@ template <typename T>
 struct Vector2
 {
 public:
-  T x;
-  T y;
+  T X;
+  T Y;
 
   /**
    * The default constructor. 
    */
-  Vector2() : x(), y(){};
+  Vector2() : X(), Y(){};
 
   /**
-   * A constructor that takes and assigns a value for each component.
+   * Constructor using initial values for each component.
    * 
-   * @param x - the x-component value.
-   * @param y - the y-component value.
+   * @param x - the X-component value.
+   * @param x - the Y-component value.
    */
-  Vector2(T x, T y) : x(x), y(y){};
+  Vector2(T x, T y) : X(x), Y(y){};
 
   ~Vector2(){};
 
   /**
-   * Compares this vector against another for equality.
+   * Compares this vector against another for equalitY.
    *
    * @param vector - The vector to compare against.
    * @return true if the two vectors are equal, otherwise false.
    */
   bool operator==(const Vector2<T> &vector) const
   {
-    return x == vector.x && y == vector.y;
+    return X == vector.X && Y == vector.Y;
   }
 
   /**
-   * Compares this vector against another for inequality.
+   * Compares this vector against another for inequalitY.
    *
    * @param vector - The vector to compare against.
    * @return true if the two vectors are not equal, otherwise false.
    */
   bool operator!=(const Vector2 &vector) const
   {
-    return x != vector.x && y != vector.y;
+    return X != vector.X && Y != vector.Y;
   }
 
   /**
@@ -52,7 +52,7 @@ public:
    */
   Vector2 operator+(const Vector2 &vector) const
   {
-    return Vector2(x + vector.x, y + vector.y);
+    return Vector2(X + vector.X, Y + vector.Y);
   }
 
   /**
@@ -63,7 +63,7 @@ public:
    */
   Vector2 operator+(T amount) const
   {
-    return Vector2(x + amount, y + amount);
+    return Vector2(X + amount, Y + amount);
   }
 
   /**
@@ -74,7 +74,7 @@ public:
    */
   Vector2 operator-(const Vector2 &vector) const
   {
-    return Vector2(x - vector.x, y - vector.y);
+    return Vector2(X - vector.X, Y - vector.Y);
   }
 
   /**
@@ -85,65 +85,65 @@ public:
    */
   Vector2 operator-(T amount) const
   {
-    return Vector2(x - amount, y - amount);
+    return Vector2(X - amount, Y - amount);
   }
 
   /**
-   * Gets the result of multiplying this vector by another.
+   * Gets the result of multiplYing this vector bY another.
    *
-   * @param vector - The other vector to multiply this by.
+   * @param vector - The other vector to multiplY this bY.
    * @return The result of the multiplication.
    */
   Vector2 operator*(const Vector2 &vector) const
   {
-    return Vector2(x * vector.x, y * vector.y);
+    return Vector2(X * vector.X, Y * vector.Y);
   }
 
   /**
-   * Gets the result of scaling the vector by an amount.
+   * Gets the result of scaling the vector bY an amount.
    *
-   * @param amount - How much to scale the vector by.
+   * @param amount - How much to scale the vector bY.
    * @return The result of scaling this vector.
    */
   Vector2 operator*(T amount) const
   {
-    return Vector2(x * amount, y * amount);
+    return Vector2(X * amount, Y * amount);
   }
 
   /**
-   * Gets the result of dividing this vector by another.
+   * Gets the result of dividing this vector bY another.
    *
-   * @param vector - The other vector to divide this by.
+   * @param vector - The other vector to divide this bY.
    * @return The result of the division.
    */
   Vector2 operator/(const Vector2 &vector) const
   {
-    return Vector2(x / vector.x, y / vector.y);
+    return Vector2(X / vector.X, Y / vector.Y);
   }
 
   /**
-   * Gets the result of dividing the vector by a value.
+   * Gets the result of dividing the vector bY a value.
    *
-   * @param amount - How much to divide the vector by.
+   * @param amount - How much to divide the vector bY.
    * @return  The result of division on this vector.
    */
   Vector2 operator/(T amount) const
   {
-    // Prevents problems with division by zero.
+    // Prevents problems with division bY zero.
     const double scale = 1. / amount;
-    return Vector2(x * scale, y * scale);
+    return Vector2(X * scale, Y * scale);
   }
 
   /**
    * Adds another vector to this.
    *
    * @param vector - The other vector to add.
-   * @return Copy of the vector after addition.
+   * @return CopY of the vector after addition.
    */
   Vector2 operator+=(const Vector2 &vector)
   {
-    x += vector.x;
-    y += vector.y;
+    X += vector.X;
+    Y += vector.Y;
     return *this;
   }
 
@@ -151,12 +151,12 @@ public:
    * Adds a value to all components of this vector.
    *
    * @param amount - The amount to add.
-   * @return Copy of the vector after addition.
+   * @return CopY of the vector after addition.
    */
   Vector2 operator+=(T amount)
   {
-    x += amount;
-    y += amount;
+    X += amount;
+    Y += amount;
     return *this;
   }
 
@@ -164,12 +164,12 @@ public:
    * Subtracts another vector from this.
    *
    * @param vector - The other vector to subtract.
-   * @return Copy of the vector after subtraction.
+   * @return CopY of the vector after subtraction.
    */
   Vector2 operator-=(const Vector2 &vector)
   {
-    x -= vector.x;
-    y -= vector.y;
+    X -= vector.X;
+    Y -= vector.Y;
     return *this;
   }
 
@@ -177,64 +177,64 @@ public:
    * Subtracts a value from all components of this vector.
    *
    * @param amount - The amount to subtract.
-   * @return Copy of the vector after subtraction.
+   * @return CopY of the vector after subtraction.
    */
   Vector2 operator-=(T amount)
   {
-    x -= amount;
-    y -= amount;
+    X -= amount;
+    Y -= amount;
     return *this;
   }
 
   /**
    * Multiplies this with another vector.
    *
-   * @param vector - The other vector to multiply by.
-   * @return Copy of the vector after subtraction.
+   * @param vector - The other vector to multiplY bY.
+   * @return CopY of the vector after subtraction.
    */
   Vector2 operator*=(const Vector2 &vector)
   {
-    x *= vector.x;
-    y *= vector.y;
+    X *= vector.X;
+    Y *= vector.Y;
     return *this;
   }
 
   /**
-   * Multiplies all components of this vector by a value.
+   * Multiplies all components of this vector bY a value.
    *
-   * @param amount - The amount to multiply by.
-   * @return Copy of the vector after multiplication.
+   * @param amount - The amount to multiplY bY.
+   * @return CopY of the vector after multiplication.
    */
   Vector2 operator*=(T amount)
   {
-    x *= amount;
-    y *= amount;
+    X *= amount;
+    Y *= amount;
     return *this;
   }
 
   /**
-   * Divides this by another vector.
+   * Divides this bY another vector.
    *
-   * @param vector - The other vector to divide by.
-   * @return Copy of the vector after subtraction.
+   * @param vector - The other vector to divide bY.
+   * @return CopY of the vector after subtraction.
    */
   Vector2 operator/=(const Vector2 &vector)
   {
-    x /= vector.x;
-    y /= vector.y;
+    X /= vector.X;
+    Y /= vector.Y;
     return *this;
   }
 
   /**
-   * Divides all components of this vector by a value.
+   * Divides all components of this vector bY a value.
    *
-   * @param amount - The amount to divide by.
-   * @return Copy of the vector after division.
+   * @param amount - The amount to divide bY.
+   * @return CopY of the vector after division.
    */
   Vector2 operator/=(T amount)
   {
-    x /= amount;
-    y /= amount;
+    X /= amount;
+    Y /= amount;
     return *this;
   }
 };
