@@ -101,10 +101,58 @@ public:
   Vector2 operator+=(const Vector2 &vector);
 
   /**
+   * Adds a value to all components of this vector.
+   *
+   * @param vector - The amount to add.
+   * @return Copy of the vector after addition.
+   */
+  Vector2 operator+=(double amount);
+
+  /**
    * Subtracts another vector from this.
    *
    * @param vector - The other vector to subtract.
    * @return Copy of the vector after subtraction.
    */
   Vector2 operator-=(const Vector2 &vector);
+
+  /**
+   * Subtracts a value from all components of this vector.
+   *
+   * @param vector - The amount to subtract.
+   * @return Copy of the vector after subtraction.
+   */
+  Vector2 operator-=(double amount);
+
+  /**
+   * Multiplies this with another vector.
+   *
+   * @param vector - The other vector to multiply by.
+   * @return Copy of the vector after subtraction.
+   */
+  Vector2 operator*=(const Vector2 &vector);
+
+  /**
+   * Multiplies all components of this vector by a value.
+   *
+   * @param vector - The amount to multiply by.
+   * @return Copy of the vector after multiplication.
+   */
+  Vector2 operator*=(double amount);
+
+  /**
+   * Divides this by another vector.
+   *
+   * @param vector - The other vector to divide by.
+   * @return Copy of the vector after subtraction.
+   */
+  Vector2 operator/=(const Vector2 &vector);
+
+  /**
+   * Divides all components of this vector by a value.
+   *
+   * @param vector - The amount to divide by.
+   * @return Copy of the vector after division.
+   */
+  Vector2 operator*=(double amount);
 };
