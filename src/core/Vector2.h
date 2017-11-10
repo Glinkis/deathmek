@@ -103,7 +103,7 @@ public:
   /**
    * Adds a value to all components of this vector.
    *
-   * @param vector - The amount to add.
+   * @param amount - The amount to add.
    * @return Copy of the vector after addition.
    */
   Vector2 operator+=(double amount);
@@ -119,7 +119,7 @@ public:
   /**
    * Subtracts a value from all components of this vector.
    *
-   * @param vector - The amount to subtract.
+   * @param amount - The amount to subtract.
    * @return Copy of the vector after subtraction.
    */
   Vector2 operator-=(double amount);
@@ -135,7 +135,7 @@ public:
   /**
    * Multiplies all components of this vector by a value.
    *
-   * @param vector - The amount to multiply by.
+   * @param amount - The amount to multiply by.
    * @return Copy of the vector after multiplication.
    */
   Vector2 operator*=(double amount);
@@ -151,8 +151,8 @@ public:
   /**
    * Divides all components of this vector by a value.
    *
-   * @param vector - The amount to divide by.
+   * @param amount - The amount to divide by.
    * @return Copy of the vector after division.
    */
-  Vector2 operator*=(double amount);
+  Vector2 operator/=(double amount);
 };
