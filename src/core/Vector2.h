@@ -140,7 +140,12 @@ public:
    * @param vector - The other vector to add.
    * @return Copy of the vector after addition.
    */
-  Vector2 operator+=(const Vector2 &vector);
+  Vector2 operator+=(const Vector2 &vector)
+  {
+    x += vector.x;
+    y += vector.y;
+    return *this;
+  }
 
   /**
    * Adds a value to all components of this vector.
@@ -148,7 +153,12 @@ public:
    * @param amount - The amount to add.
    * @return Copy of the vector after addition.
    */
-  Vector2 operator+=(T amount);
+  Vector2 operator+=(T amount)
+  {
+    x += amount;
+    y += amount;
+    return *this;
+  }
 
   /**
    * Subtracts another vector from this.
@@ -156,7 +166,12 @@ public:
    * @param vector - The other vector to subtract.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator-=(const Vector2 &vector);
+  Vector2 operator-=(const Vector2 &vector)
+  {
+    x -= vector.x;
+    y -= vector.y;
+    return *this;
+  }
 
   /**
    * Subtracts a value from all components of this vector.
@@ -164,7 +179,12 @@ public:
    * @param amount - The amount to subtract.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator-=(T amount);
+  Vector2 operator-=(T amount)
+  {
+    x -= amount;
+    y -= amount;
+    return *this;
+  }
 
   /**
    * Multiplies this with another vector.
@@ -172,7 +192,12 @@ public:
    * @param vector - The other vector to multiply by.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator*=(const Vector2 &vector);
+  Vector2 operator*=(const Vector2 &vector)
+  {
+    x *= vector.x;
+    y *= vector.y;
+    return *this;
+  }
 
   /**
    * Multiplies all components of this vector by a value.
@@ -180,7 +205,12 @@ public:
    * @param amount - The amount to multiply by.
    * @return Copy of the vector after multiplication.
    */
-  Vector2 operator*=(T amount);
+  Vector2 operator*=(T amount)
+  {
+    x *= amount;
+    y *= amount;
+    return *this;
+  }
 
   /**
    * Divides this by another vector.
@@ -188,7 +218,12 @@ public:
    * @param vector - The other vector to divide by.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator/=(const Vector2 &vector);
+  Vector2 operator/=(const Vector2 &vector)
+  {
+    x /= vector.x;
+    y /= vector.y;
+    return *this;
+  }
 
   /**
    * Divides all components of this vector by a value.
@@ -196,5 +231,10 @@ public:
    * @param amount - The amount to divide by.
    * @return Copy of the vector after division.
    */
-  Vector2 operator/=(T amount);
+  Vector2 operator/=(T amount)
+  {
+    x /= amount;
+    y /= amount;
+    return *this;
+  }
 };
