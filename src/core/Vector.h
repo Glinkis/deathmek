@@ -35,7 +35,29 @@ public:
    * 
    * @param vector - Vector to construct from.
    */
-  Vector(const Vector2 &vector) : Data(vector.Data){};
+  Vector(const Vector &vector) : Data(vector.Data){};
 
   ~Vector(){};
+
+  /**
+   * Compares this vector against another for equality.
+   *
+   * @param vector - The vector to compare against.
+   * @return true if the two vectors are equal, otherwise false.
+   */
+  bool operator==(const Vector &vector) const
+  {
+    return Data == vector.Data;
+  }
+
+  /**
+   * Compares this vector against another for inequality.
+   *
+   * @param vector - The vector to compare against.
+   * @return true if the two vectors are not equal, otherwise false.
+   */
+  bool operator!=(const Vector &vector) const
+  {
+    return Data != vector.Data;
+  }
 };
