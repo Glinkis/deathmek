@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <algorithm>
 #include <initializer_list>
 
@@ -13,7 +14,7 @@ template <typename T, int n>
 struct Vector
 {
 public:
-  T Data[n];
+  std::array<T, n> Data;
 
   /**
    * The default constructor. 
@@ -25,10 +26,7 @@ public:
    * 
    * @param data - A list of component values.
    */
-  Vector(std::initializer_list<T> data)
-  {
-    std::copy(data.begin(), data.end(), Data);
-  };
+  Vector(std::array<T, n> data) : Data(data){};
 
   /**
    * Constructs a Vector from another Vector.
