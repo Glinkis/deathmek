@@ -8,13 +8,13 @@ public:
   T Y;
 
   /**
-   * The default constructor. 
+   * The default constructor.
    */
   Vector2() : X(), Y(){};
 
   /**
    * Constructor using initial values for each component.
-   * 
+   *
    * @param x - The X-component value.
    * @param x - The Y-component value.
    */
@@ -22,7 +22,7 @@ public:
 
   /**
    * Constructs a vector from a Vector2.
-   * 
+   *
    * @param vector - Vector to construct from.
    */
   Vector2(const Vector2 &vector) : X(vector.X), Y(vector.Y){};

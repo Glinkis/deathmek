@@ -1,4 +1,4 @@
-# Install script for directory: D:/Projects/deathmek
+# Install script for directory: C:/Users/hazaa/Desktop/C++ Projects/deathmek
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Projects/deathmek/CodeBlocks/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/hazaa/Desktop/C++ Projects/deathmek/CodeBlocks/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

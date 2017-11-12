@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Projects/deathmek/src/main.cpp" "D:/Projects/deathmek/CodeBlocks/CMakeFiles/deathmek.dir/src/main.cpp.obj"
+  "C:/Users/hazaa/Desktop/C++ Projects/deathmek/src/main.cpp" "C:/Users/hazaa/Desktop/C++ Projects/deathmek/CodeBlocks/CMakeFiles/deathmek.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
