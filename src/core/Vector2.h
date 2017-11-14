@@ -1,11 +1,16 @@
 #pragma once
 
-template <typename T>
+/**
+ * Representation of a two-dimensional vector.
+ *
+ * @tparam Scalar - The vector component type.
+ */
+template <typename Scalar>
 struct Vector2
 {
 public:
-  T X;
-  T Y;
+  Scalar X;
+  Scalar Y;
 
   /**
    * The default constructor. 
@@ -13,12 +18,17 @@ public:
   Vector2() : X(), Y(){};
 
   /**
+   * Constructor filling the component with a single value.
+   */
+  Vector2(Scalar value) : X(value), Y(value){};
+
+  /**
    * Constructor using initial values for each component.
    * 
    * @param x - The X-component value.
    * @param y - The Y-component value.
    */
-  Vector2(T x, T y) : X(x), Y(y){};
+  Vector2(Scalar x, Scalar y) : X(x), Y(y){};
 
   /**
    * Constructs a vector from a Vector2.
@@ -26,8 +36,6 @@ public:
    * @param vector - Vector to construct from.
    */
   Vector2(const Vector2 &vector) : X(vector.X), Y(vector.Y){};
-
-  ~Vector2(){};
 
   /**
    * Compares this vector against another for equality.
@@ -48,7 +56,7 @@ public:
    */
   bool operator!=(const Vector2 &vector) const
   {
-    return X != vector.X && Y != vector.Y;
+    return X != vector.X || Y != vector.Y;
   }
 
   /**
@@ -63,12 +71,12 @@ public:
   }
 
   /**
-   * Gets the result of this vector + amount.
+   * Gets the result of this vector + value.
    *
-   * @param amount - An amount to add to each component.
-   * @return The result of this vector + amount.
+   * @param value - An value to add to each component.
+   * @return The result of this vector + value.
    */
-  Vector2 operator+(T amount) const
+  Vector2 operator+(Scalar amount) const
   {
     return Vector2(X + amount, Y + amount);
   }
@@ -85,14 +93,24 @@ public:
   }
 
   /**
-   * Gets the result of this vector - amount.
+   * Gets the result of this vector - value.
    *
-   * @param amount - An amount to subtract from each component.
-   * @return The result of this vector - amount.
+   * @param value - An value to subtract from each component.
+   * @return The result of this vector - value.
    */
-  Vector2 operator-(T amount) const
+  Vector2 operator-(Scalar amount) const
   {
     return Vector2(X - amount, Y - amount);
+  }
+
+  /**
+   * Gets a negated version of this vector.
+   *
+   * @return The negated version of this vector.
+   */
+  Vector2 operator-() const
+  {
+    return Vector2(-X, -Y);
   }
 
   /**
@@ -107,12 +125,12 @@ public:
   }
 
   /**
-   * Gets the result of scaling the vector by an amount.
+   * Gets the result of scaling the vector by an value.
    *
-   * @param amount - How much to scale the vector by.
+   * @param value - How much to scale the vector by.
    * @return The result of scaling this vector.
    */
-  Vector2 operator*(T amount) const
+  Vector2 operator*(Scalar amount) const
   {
     return Vector2(X * amount, Y * amount);
   }
@@ -131,10 +149,10 @@ public:
   /**
    * Gets the result of dividing the vector bY a value.
    *
-   * @param amount - How much to divide the vector bY.
+   * @param value - How much to divide the vector bY.
    * @return The result of division on this vector.
    */
-  Vector2 operator/(T amount) const
+  Vector2 operator/(Scalar amount) const
   {
     // Prevents problems with division bY zero.
     const double scale = 1. / amount;
@@ -157,10 +175,10 @@ public:
   /**
    * Adds a value to all components of this vector.
    *
-   * @param amount - The amount to add.
+   * @param value - The value to add.
    * @return Copy of the vector after addition.
    */
-  Vector2 operator+=(T amount)
+  Vector2 operator+=(Scalar amount)
   {
     X += amount;
     Y += amount;
@@ -183,10 +201,10 @@ public:
   /**
    * Subtracts a value from all components of this vector.
    *
-   * @param amount - The amount to subtract.
+   * @param value - The value to subtract.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator-=(T amount)
+  Vector2 operator-=(Scalar amount)
   {
     X -= amount;
     Y -= amount;
@@ -209,10 +227,10 @@ public:
   /**
    * Multiplies all components of this vector by a value.
    *
-   * @param amount - The amount to multiplY by.
+   * @param value - The value to multiplY by.
    * @return Copy of the vector after multiplication.
    */
-  Vector2 operator*=(T amount)
+  Vector2 operator*=(Scalar amount)
   {
     X *= amount;
     Y *= amount;
@@ -220,7 +238,7 @@ public:
   }
 
   /**
-   * Divides this bY another vector.
+   * Divides this by another vector.
    *
    * @param vector - The other vector to divide by.
    * @return Copy of the vector after subtraction.
@@ -235,13 +253,21 @@ public:
   /**
    * Divides all components of this vector by a value.
    *
-   * @param amount - The amount to divide by.
+   * @param value - The value to divide by.
    * @return Copy of the vector after division.
    */
-  Vector2 operator/=(T amount)
+  Vector2 operator/=(Scalar value)
   {
-    X /= amount;
-    Y /= amount;
+    X /= value;
+    Y /= value;
     return *this;
   }
+
+  /**
+   * Returns a vector with all components set to zero.
+   */
+  static const Vector2<Scalar> Zero;
 };
+
+template <typename Scalar>
+const Vector2<Scalar> Vector2<Scalar>::Zero = Vector2((Scalar)0);
