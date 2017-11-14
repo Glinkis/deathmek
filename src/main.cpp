@@ -1,5 +1,6 @@
 #include <iostream>
 #include "core/Vector2.h"
+#include "core/Vector2Utils.h"
 
 int main()
 {
