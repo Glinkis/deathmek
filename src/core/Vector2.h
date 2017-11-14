@@ -76,9 +76,9 @@ public:
    * @param value - An value to add to each component.
    * @return The result of this vector + value.
    */
-  Vector2 operator+(Scalar amount) const
+  Vector2 operator+(Scalar value) const
   {
-    return Vector2(X + amount, Y + amount);
+    return Vector2(X + value, Y + value);
   }
 
   /**
@@ -98,9 +98,9 @@ public:
    * @param value - An value to subtract from each component.
    * @return The result of this vector - value.
    */
-  Vector2 operator-(Scalar amount) const
+  Vector2 operator-(Scalar value) const
   {
-    return Vector2(X - amount, Y - amount);
+    return Vector2(X - value, Y - value);
   }
 
   /**
@@ -130,9 +130,9 @@ public:
    * @param value - How much to scale the vector by.
    * @return The result of scaling this vector.
    */
-  Vector2 operator*(Scalar amount) const
+  Vector2 operator*(Scalar value) const
   {
-    return Vector2(X * amount, Y * amount);
+    return Vector2(X * value, Y * value);
   }
 
   /**
@@ -152,10 +152,10 @@ public:
    * @param value - How much to divide the vector bY.
    * @return The result of division on this vector.
    */
-  Vector2 operator/(Scalar amount) const
+  Vector2 operator/(Scalar value) const
   {
     // Prevents problems with division bY zero.
-    const double scale = 1. / amount;
+    const double scale = 1. / value;
     return Vector2(X * scale, Y * scale);
   }
 
@@ -178,10 +178,10 @@ public:
    * @param value - The value to add.
    * @return Copy of the vector after addition.
    */
-  Vector2 operator+=(Scalar amount)
+  Vector2 operator+=(Scalar value)
   {
-    X += amount;
-    Y += amount;
+    X += value;
+    Y += value;
     return *this;
   }
 
@@ -204,10 +204,10 @@ public:
    * @param value - The value to subtract.
    * @return Copy of the vector after subtraction.
    */
-  Vector2 operator-=(Scalar amount)
+  Vector2 operator-=(Scalar value)
   {
-    X -= amount;
-    Y -= amount;
+    X -= value;
+    Y -= value;
     return *this;
   }
 
@@ -230,10 +230,10 @@ public:
    * @param value - The value to multiplY by.
    * @return Copy of the vector after multiplication.
    */
-  Vector2 operator*=(Scalar amount)
+  Vector2 operator*=(Scalar value)
   {
-    X *= amount;
-    Y *= amount;
+    X *= value;
+    Y *= value;
     return *this;
   }
 
